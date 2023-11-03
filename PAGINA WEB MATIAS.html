@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Pagina web Matias</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Agregamos etiquetas Meta (SEO)-->
+    <meta name="keywords" content="video juego flash, mmorpg, aqw">
+    <meta name="description" content="Pagina web sobre un videojuego.">
+    <meta name="author" content="Matías Gonzalez">
+    <!--Importamos Google Fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <!--Importamos Normalize-->
+    <link rel="stylesheet" href="css/normalize.css"> 
+    <!--Importamos Font Awesome-->
+	<link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/web.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="cajapadre">
+            <nav class="menu"> <!--Agregamos nav para moveros dentro del sitio web-->
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nuevo</a></li>
+                <li><a href="#">Trailer</a></li>                
+                <li><a href="#">Foro</a></li>
+                <li><a href="#">Redes sociales</a></li>
+                <li><a href="#">Soporte</a></li>
+                
+            </nav>
+
+        </div>
+        <div class="cotenedor-boton">  
+            <div class="boton">
+                <a href="https://www.aq.com/landing/" class="boton">JUGAR</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <!------------------Seccion 1----------------->
+
+    <section class="cajapadre1">
+        <a href="https://www.aq.com/play-now/">
+            <img src="css/img/PUBLICIDAD1.jpg" alt="Publicidad 1">
+        </a>
+        <a href="https://www.aq.com/order-now/direct/">
+            <img src="css/img/PUBLICIDAD2.jpg" alt="Publicidad 2">
+        </a>
+        <a href="https://www.aq.com/order-now/direct/">
+            <img src="css/img/PUBLICIDAD3.jpg" alt="Publicidad 3">
+        </a>
+    </section>
+
+    <!------------------Seccion 2----------------->
+
+    <section class="cajapadre2">
+
+    
+  <div class="enlace-con-previa" onclick="reproducirVideo()">
+    <div class="vista-previa">
+      <!-- Imagen de vista previa -->
+      <img src="css/img/trailer.jpg" alt="Vista previa del video">
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="cerrar-modal" onclick="cerrarModal()">&#10006;</div>
+    <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    function reproducirVideo() {
+      var modal = document.getElementById('modal'); 
+      var iframe = modal.querySelector('iframe');
+      iframe.src = 'https://www.youtube.com/embed/autGj6u9a44?autoplay=1';
+      modal.style.display = 'flex';
+      
+    }
+
+    function cerrarModal() {
+      var modal = document.getElementById('modal');
+      var iframe = modal.querySelector('iframe');
+      iframe.src = '';
+      modal.style.display = 'none';
+    }
+  </script>
+
+        <div class="trailer">
+            <a href="https://www.youtube.com/watch?v=autGj6u9a44" target="_blank"></a>
+        </div>
+        <h1>Juego de rol de fantasía en línea gratuito MMO/MMORPG.</h1>
+        <h4>¡Prepárate para una acción y aventura ininterrumpidas! 
+            AdventureQuest Worlds es el mejor MMORPG (juego de rol
+            multijugador masivo en línea) basado en navegador. No
+            hay descargas ni software que instalar, ¡y este RPG 
+            de fantasía en 2D es gratuito para jugar! ¡Esgrime tu
+            espada, conjura tus hechizos y responde al llamado 
+            de Battle On!</h4>
+    </section>
+
+
+    <!------------------Sección 3----------------->
+
+    <section class="foro">
+        <div class="tema">
+            <h2 class="pintar">HOLA!</h2>
+            <p class="pintar">Autor: Trav | Fecha: 15 de octubre de 2023</p>
+            <p class="pintar">¡Bienvenido al foro!</p>
+        </div>
+
+        <div class="tema">
+            <h2 class="pintar">Guia para principiantes</h2>
+            <p class="pintar">Autor: JuegoSolo | Fecha: 27 de octubre de 2023</p>
+            <p class="pintar">Comparto algunas guias para principiantes.</p>
+        </div>
+    </section>
+    <section class="crear-tema">
+        <h2>Crear Nuevo Tema</h2>
+        <form action="publicar.php" method="post">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <input type="submit" value="Publicar">
+        </form>
+    </section>
+
+<!------------------Sección 4----------------->
+
+    <a href="galeria.html" class="galeria-link">
+        <img src="css/img/Pink-Pirate-Captain-Armor-Beleen-flash-games-AQW.jpg" alt="Galeria">
+    </a>
+
+    <!------------------FOOTER----------------->
+	<footer>
+		<section class="contacto">
+			<div class="contenedor">
+				<h3 class="titulo">Soporte</h3>
+				<form class="formulario" action="">
+					<input type="text" placeholder="Nombre" name="nombre" required>
+					<input type="email" placeholder="Correo" name="correo" required>
+					<textarea name="mensaje" placeholder="Mensaje:"></textarea>
+					<input class="boton" type="submit" value="Enviar">
+				</form>
+			</div>	
+		</section>
+
+		<section class="redes-sociales">
+			<div class="contenedor">
+				<a class="twitter" href="https://twitter.com/ArtixKrieger" target="_blank"><em class="Fab fa-twitter"></em></a>
+				<a class="facebook" href="https://www.facebook.com/AQWorldsMMO" target="_blank"><em class="Fab fa-facebook"></em></a>
+				<a class="youtube" href="https://www.youtube.com/user/BattleOnGames" target="_blank"><em class="Fab fa-youtube"></em></a>
+				<a class="github" href="http://www.Github.com" target="_blank"><em class="Fab fa-github"></em></a>
+				<a class="instagram" href="http://www.Instagram.com" target="_blank"><em class="Fab fa-instagram"></em></a>
+			</div>
+		</section>
+	</footer> 
+</body>
+</html>
